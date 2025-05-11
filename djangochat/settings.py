@@ -9,6 +9,7 @@ https://docs.djangoproject.com/en/3.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
+import dj_database_url
 
 from pathlib import Path
 
@@ -80,6 +81,10 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+DATABASES["default"] = dj_database_url.parse("postgresql://chat_app_aw3g_user:7TvSllkLyCObLYI5KzX5Pn6G5W0M1Nz3@dpg-d0gc29re5dus73a9dtu0-a.oregon-postgres.render.com/chat_app_aw3g")
+
+# postgresql://chat_app_aw3g_user:7TvSllkLyCObLYI5KzX5Pn6G5W0M1Nz3@dpg-d0gc29re5dus73a9dtu0-a.oregon-postgres.render.com/chat_app_aw3g
 
 
 # Password validation
